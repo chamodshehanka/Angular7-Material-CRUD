@@ -9,6 +9,10 @@ import { SignupComponent } from './login/signup/signup.component';
 import { MembersComponent } from './login/members/members.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { DeveloperComponent } from './developers/developer/developer.component';
+import {MaterialModule} from './material/material.module';
+import {DeveloperService} from './shared/developer.service';
+import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCD9e6vDbCfh9LeM6Q86lwqUgFJz7XQ4r4',
@@ -30,10 +34,13 @@ export const firebaseConfig = {
     DeveloperComponent
   ],
   imports: [
-    BrowserModule,
+      BrowserModule,
+      MaterialModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule,
       AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [DeveloperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

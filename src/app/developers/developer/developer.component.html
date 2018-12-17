@@ -1,3 +1,29 @@
-<p>
-  developer works!
-</p>
+<form [formGroup]="service.form" class="normal-form">
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <div class="controllers-container">
+        <input type="hidden" formControlName="$key">
+
+        <mat-form-field>
+          <input matInput formControlName="name" placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput formControlName="position" placeholder="Position">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput formControlName="mobile" placeholder="Mobile">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="controllers-container">
+        <div class="add-bottom-padding">
+
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
