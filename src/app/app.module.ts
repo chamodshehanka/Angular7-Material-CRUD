@@ -14,6 +14,7 @@ import {DeveloperService} from './shared/developer.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DeveloperListComponent } from './developers/developer-list/developer-list.component';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCD9e6vDbCfh9LeM6Q86lwqUgFJz7XQ4r4',
@@ -40,6 +41,7 @@ export const firebaseConfig = {
       MaterialModule,
       ReactiveFormsModule,
       BrowserAnimationsModule,
+      AngularFirestoreModule,
       AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [DeveloperService],

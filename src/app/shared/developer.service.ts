@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Developer} from './developer.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeveloperService {
+  formData: Developer;
 
-  constructor() { }
+  constructor(private firestore: AngularFirestore) { }
 
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
@@ -14,4 +17,8 @@ export class DeveloperService {
     position: new FormControl(''),
     phone: new FormControl('')
   });
+
+  getDevelopers() {
+    return this.firestore.collection('developers').snapshotChanges();
+  }
 }
