@@ -13,6 +13,7 @@ import {MaterialModule} from './material/material.module';
 import {DeveloperService} from './shared/developer.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DeveloperListComponent } from './developers/developer-list/developer-list.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCD9e6vDbCfh9LeM6Q86lwqUgFJz7XQ4r4',
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     SignupComponent,
     MembersComponent,
     DevelopersComponent,
-    DeveloperComponent
+    DeveloperComponent,
+    DeveloperListComponent
   ],
   imports: [
       BrowserModule,
