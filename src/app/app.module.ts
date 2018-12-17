@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './login/email/email.component';
 import { SignupComponent } from './login/signup/signup.component';
 import { MembersComponent } from './login/members/members.component';
+import { DevelopersComponent } from './developers/developers.component';
+import { DeveloperComponent } from './developers/developer/developer.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCD9e6vDbCfh9LeM6Q86lwqUgFJz7XQ4r4',
@@ -23,7 +25,9 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    MembersComponent
+    MembersComponent,
+    DevelopersComponent,
+    DeveloperComponent
   ],
   imports: [
     BrowserModule,
