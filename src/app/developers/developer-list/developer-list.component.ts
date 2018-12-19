@@ -28,10 +28,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./developer-list.component.css']
 })
 export class DeveloperListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-
   list: Developer[];
+  displayedColumns: string[] = ['name', 'weight', 'symbol'];
+  dataSource = this.list;
+
   constructor(
       private service: DeveloperService,
       private firestore: AngularFirestore
