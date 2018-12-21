@@ -15,6 +15,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DeveloperListComponent } from './developers/developer-list/developer-list.component';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCD9e6vDbCfh9LeM6Q86lwqUgFJz7XQ4r4',
@@ -34,7 +37,8 @@ export const firebaseConfig = {
     MembersComponent,
     DevelopersComponent,
     DeveloperComponent,
-    DeveloperListComponent
+    DeveloperListComponent,
+    NavbarComponent
   ],
   imports: [
       BrowserModule,
@@ -42,7 +46,13 @@ export const firebaseConfig = {
       ReactiveFormsModule,
       BrowserAnimationsModule,
       AngularFirestoreModule,
-      AngularFireModule.initializeApp(firebaseConfig)
+      AngularFireModule.initializeApp(firebaseConfig),
+      LayoutModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule
   ],
   providers: [DeveloperService],
   bootstrap: [AppComponent]

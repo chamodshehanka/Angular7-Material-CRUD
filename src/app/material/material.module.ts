@@ -10,7 +10,7 @@ import * as Material from '@angular/material';
       Material.MatGridListModule,
       Material.MatFormFieldModule,
       Material.MatInputModule,
-      Material.MatTableModule
+      Material.MatTableModule,
   ],
   exports: [
       Material.MatToolbarModule,
