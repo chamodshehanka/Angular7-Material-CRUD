@@ -12,6 +12,7 @@ import * as Material from '@angular/material';
       Material.MatInputModule,
       Material.MatTableModule,
       Material.MatButtonModule,
+      Material.MatMenuModule,
   ],
   exports: [
       Material.MatToolbarModule,
@@ -20,6 +21,7 @@ import * as Material from '@angular/material';
       Material.MatInputModule,
       Material.MatTableModule,
       Material.MatButtonModule,
+      Material.MatMenuModule,
   ]
 })
 export class MaterialModule { }
