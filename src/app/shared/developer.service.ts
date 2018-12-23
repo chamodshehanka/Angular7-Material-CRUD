@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {FormGroup, FormControl} from '@angular/forms';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {Developer} from './developer.model';
 
@@ -13,10 +13,19 @@ export class DeveloperService {
 
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
-    name: new FormControl(''),
-    position: new FormControl(''),
-    phone: new FormControl('')
+    name: new FormControl('', Validators.required),
+    position: new FormControl('', Validators.required),
+    phone: new FormControl('', [Validators.required])
   });
+
+  initializeFormGroup() {
+    this.form.setValue({
+      $key: null,
+      name: '',
+      position: '',
+      phone: ''
+    });
+  }
 
   getDevelopers() {
     return this.firestore.collection('developers').snapshotChanges();

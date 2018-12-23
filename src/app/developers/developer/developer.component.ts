@@ -13,4 +13,8 @@ export class DeveloperComponent implements OnInit {
   ngOnInit() {
   }
 
+    onClear() {
+        this.service.form.reset();
+        this.service.initializeFormGroup();
+    }
 }
